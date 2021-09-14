@@ -1,0 +1,32 @@
+Package: SINBAD
+Type: Package
+Title: A Single Cell DNA Methylation Data Processing Pipeline
+Version: 0.1.2
+Author: Yasin Uzun
+Maintainer: The package maintainer <yasin.delco@gmail.com>
+Description: Performs demultiplexing, adapter trimming, mapping, quantification, dimensionality reduction and differential methylation analysis for single cell DNA methylation data.
+License: MIT License
+Encoding: UTF-8
+LazyData: true
+biocViews:
+Imports:
+  data.table,
+  DelayedArray,
+  ShortRead,
+  readr,
+  doSNOW,
+  reshape2,
+  Rsamtools,
+  densityClust,
+  umap,
+  colorspace,
+  RColorBrewer,
+  scales,
+  ggplot2,
+  viridis,
+  dplyr,
+  GenomicRanges,
+  parallel,
+  flexdashboard,
+  magrittr,
+  kableExtra

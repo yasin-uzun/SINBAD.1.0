@@ -1,0 +1,16 @@
+exportPattern("^[[:alpha:]]+")
+
+export(demux_fastq_files)
+export(count_fastq_reads)
+export(trim_fastq_files)
+export(plot_preprocessing_results)
+export(align_sample)
+export(process_bismark_alignment_reports)
+export(count_bam_files)
+export(compute_coverage_rates)
+export(plot_alignment_stats)
+export(process_bismark_split_reports)
+export(plot_split_reports)
+export(call_methylation_sites_for_sample)
+export(construct_sinbad_object)
+
