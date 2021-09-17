@@ -15,7 +15,7 @@ install.packages("vioplot")
 Then type the following commands in R command prompt:
 ```R
 library(devtools)
-install_github("yasin-uzun/SINBAD.0.2")
+install_github("yasin-uzun/SINBAD.1.0")
 ```
 Once you have installed the SINBAD, verify that it is installed correctly as follows:
 
