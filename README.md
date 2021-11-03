@@ -15,7 +15,7 @@ install.packages("vioplot")
 Then type the following commands in R command prompt:
 ```R
 library(devtools)
-install_github("yasin-uzun/SINBAD.0.2")
+install_github("yasin-uzun/SINBAD.1.0")
 ```
 Once you have installed the SINBAD, verify that it is installed correctly as follows:
 
@@ -31,7 +31,7 @@ If SINBAD is installed without any problems, you should see the following messag
 To run SINBAD, you need to have the underlying software:
 * Adapter Trimmer: Cutadapt or TrimGalor or Trimmomatic 
 * Aligner: Bismark (with Bowtie) or BSMAP or BS3
-* Duplicate removal: samtools or picard
+* Duplicate removal: samtools
 * Demultiplexer: demultiplex_fastq.pl perl script (see below).
 
 Note that you only need the tools you will use to be installed, i.e, you don't need BSMAP or BS3 if you will only use Bismark as the aligner.
