@@ -55,7 +55,6 @@ You can download the templates for the configuration files from [here](https://c
 
 You can run SINBAD as follows:
 
-1. Import libraries
 ```R
 
 # Import libraries
