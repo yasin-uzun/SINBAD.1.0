@@ -92,6 +92,7 @@ To try SINBAD with some example data, please contact the authors (see below).
 
 ## Citation
 If you use SINBAD in your study, please cite it as follows: 
+
 Yasin Uzun, Wenbao Yu, Changya Chen, Kai Tan. SINBAD: a flexible tool for single cell DNA methylation data.bioRxiv, 2021. doi: https://doi.org/10.1101/2021.10.23.465577 
 
 
