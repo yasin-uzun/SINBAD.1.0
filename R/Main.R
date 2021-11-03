@@ -764,7 +764,9 @@ wrap_dim_red <- function(sinbad_object,
 
 
 wrap_plot_features <- function(sinbad_object, features,
-                               dim_red_annot_type = 'Bins_100Kb', features_annot_type = 'promoters')
+                               dim_red_annot_type = 'Bins_100Kb',
+                               features_annot_type = 'promoters',
+                               legend_title = 'Met. Rate')
 {
 
   dim_red_object = sinbad_object$dim_red_objects[[dim_red_annot_type]]
@@ -772,17 +774,17 @@ wrap_plot_features <- function(sinbad_object, features,
   feature_matrix = sinbad_object$met_matrices[[features_annot_type]]
   feature_matrix[1:5, 1:5]
 
-  legend_title = ''
+
   #if(features_annot_type == 'promoters')
   #{
   #  feature_matrix = 1 - feature_matrix
   #  legend_title = 'De-methylation'
   #}
-  if(features_annot_type == 'MAPLE')
-  {
+  #if(features_annot_type == 'MAPLE')
+  #{
 
-    legend_title = 'MAPLE'
-  }
+    #legend_title = 'MAPLE'
+  #}
 
   plot_features(umap = dim_red_object$umap,
                 feature_matrix = feature_matrix,

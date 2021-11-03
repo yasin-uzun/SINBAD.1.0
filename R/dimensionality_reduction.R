@@ -89,7 +89,7 @@ plot_dim_red <- function(dim_red, cell_groups = NULL, title = '',
             axis.title=element_text(size=16),
             axis.text=element_text(size=16),
             plot.title = element_text(size=16,face="bold"),
-            plot.margin =  margin(10.1, 8.1, 10.1, 8.1)
+            plot.margin =  ggplot2::margin(10.1, 8.1, 10.1, 8.1)
 
       )
 
@@ -110,7 +110,7 @@ plot_dim_red <- function(dim_red, cell_groups = NULL, title = '',
             axis.title=element_text(size=16),
             axis.text=element_text(size=16),
             plot.title = element_text(size=16,face="bold"),
-            plot.margin =  margin(10.1, 8.1, 8.1, 8.1)
+            plot.margin =  ggplot2::margin(10.1, 8.1, 8.1, 8.1)
 
       )
 
@@ -182,7 +182,7 @@ plot_feature <- function(dim_red, feature_matrix = NULL,
   gg1 = gg + geom_point(size=point_size, aes(colour = feature_vector) ) +
     theme_bw(base_size = 16) +
     scale_colour_gradient(high = highcol, low = lowcol) +
-    labs(colour="Met. Rate") +
+    labs(colour=legend_title) +
     ggtitle(paste0(title, '\n', feature)) +
     theme(plot.title = element_text( hjust = 0.5)) +
     #labs(colour = legend_title) +
@@ -213,7 +213,9 @@ reduce_dims_for_sample <- function(met_mat_for_dim_red,
 {
   met_mat_for_dim_red[1:5, 1:5]
 
-  pca <- compute_pca(met_mat_for_dim_red, vmr_count = 2000 )
+  #pca <- compute_pca(met_mat_for_dim_red, vmr_count = 2000 )
+  pca <- compute_pca(met_mat_for_dim_red)
+
   dim(pca)
   plot(pca[,  1:2])
   umap <- compute_umap(pca, num_dims =10, min_dist = 0.01)
@@ -312,7 +314,7 @@ plot_features <- function(umap, feature_matrix, features,  name_for_dim_red, nam
                                , fill= cluster
                                )) +
           geom_violin(trim=FALSE) +
-          ggplot2::scale_fill_manual(values = color_map) + ggtitle( feature) + NoLegend()
+          ggplot2::scale_fill_manual(values = color_map) + ggtitle( feature) + Seurat::NoLegend()
 
         print(gg2)
         plot_file = paste0(feature_plot_dir, '/eps/', feature, '.vio.eps')
