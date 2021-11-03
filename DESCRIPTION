@@ -1,7 +1,7 @@
 Package: SINBAD
 Type: Package
 Title: A Single Cell DNA Methylation Data Processing Pipeline
-Version: 0.1.2
+Version: 1.0.0
 Author: Yasin Uzun
 Maintainer: The package maintainer <yasin.delco@gmail.com>
 Description: Performs demultiplexing, adapter trimming, mapping, quantification, dimensionality reduction and differential methylation analysis for single cell DNA methylation data.
