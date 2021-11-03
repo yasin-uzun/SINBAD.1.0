@@ -53,17 +53,33 @@ You can download the templates for the configuration files from [here](https://c
 
 ## Running
 
-SINBAD is run in two steps:
-1. Read configuration files: 
-```R
-read_configs(config_dir)
-```
-`config_dir` should point to your configuration file directory (mentioned above). 
+You can run SINBAD as follows:
 
-2. Process data:
+1. Import libraries
 ```R
+
+# Import libraries
+library(SINBAD)
+SINBAD::test()
+packageVersion('SINBAD')
+library(doSNOW)
+
+# Read configuration parameters
+config_dir = 'config_files/config_files.hg38_plus_lambda.paired/'
+read_configs(config_dir)
+
+# Set input and output directories, sample name
+raw_fastq_dir = 'data/example_paired/reads/'
+demux_index_file = paste0('data/demux_index.snmc.txt')
+working_dir = 'data/example_paired/working_dir/'
+dir.create(working_dir, recursive = T)
+sample_name <- 'Sample'
+
+# Do the processing
 process_sample_wrapper(raw_fastq_dir, demux_index_file, working_dir, sample_name)
+
 ```
+* `config_dir` should point to your configuration file directory (mentioned above). 
 * `raw_fastq_dir` should point to the directory containing fastq files as the input. 
 * `demux_index_file` should point to the demultiplexing index file for the fastq files. 
 * `working_dir` should point to the directory where all the outputs will be placed into. 
@@ -75,8 +91,9 @@ This function reads fastq files, demultiplexes them into single cells, performs 
 To try SINBAD with some example data, please contact the authors (see below). 
 
 ## Citation
-If you use SINBAD in your study, please cite it as follows: SINBAD: A pipeline for processing SINgle cell Bisulfite sequencing samples and Analysis of Data
-, GitHub, 2020. 
+If you use SINBAD in your study, please cite it as follows: 
+Yasin Uzun, Wenbao Yu, Changya Chen, Kai Tan. SINBAD: a flexible tool for single cell DNA methylation data.bioRxiv, 2021. doi: https://doi.org/10.1101/2021.10.23.465577 
+
 
 ## Contact
 For any questions or comments, please contact Yasin Uzun (uzuny at email chop edu)
