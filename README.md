@@ -83,7 +83,7 @@ process_sample_wrapper(raw_fastq_dir, demux_index_file, working_dir, sample_name
 * `raw_fastq_dir` should point to the directory containing fastq files as the input. 
 * `demux_index_file` should point to the demultiplexing index file for the fastq files. 
 * `working_dir` should point to the directory where all the outputs will be placed into. 
-* `sample_name` (optional) is the name for the sample or project.
+* `sample_name` is the name for the sample or project.
 
 This function reads fastq files, demultiplexes them into single cells, performs filtering, mapping (alignment), DNA methylation calling  and quantification, dimensionality reduction, clustering and differential methylation analysis for the given input. All the outputs are placed into related directories in `working_dir`.
 
@@ -98,7 +98,6 @@ Yasin Uzun, Wenbao Yu, Changya Chen and Kai Tan. SINBAD: a flexible tool for sin
 
 ## Contact
 For any questions or comments, please contact Yasin Uzun (uzuny at email chop edu)
-
 
 
 
